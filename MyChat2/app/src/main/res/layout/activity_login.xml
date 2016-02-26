@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/meitu"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:id="@+id/edittext_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/user"
+            android:drawableStart="@drawable/user"
+            android:hint="用户名(疯雨)"/>
+
+
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/password"
+            android:drawableStart="@drawable/password"
+            android:hint="密码(19931203)"
+            android:password="true"/>
+
+        <EditText
+            android:id="@+id/edittext_server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/serverip"
+            android:drawableStart="@drawable/serverip"
+            android:hint="服务器ip"/>
+
+        <!-- 定义一个登陆按钮 -->
+        <Button
+            android:id="@+id/button"
+            android:onClick="onClick_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登陆"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <CheckBox
+                android:id="@+id/checkbox_save_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="存储密码"/>
+            <CheckBox
+                android:id="@+id/checkbox_auto_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动登陆"
+                android:layout_gravity="right"/>
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户注册"
+                android:onClick="onClick_Register"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="right|bottom"/>
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 定义一个用户名文本框 使用绝对定位 -->
+
+
+</LinearLayout>
